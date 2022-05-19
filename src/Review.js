@@ -5,7 +5,6 @@ import { FaChevronLeft, FaChevronRight, FaQuoteRight } from "react-icons/fa";
 function Review() {
   const [index, setIndex] = useState(0);
   const { name, job, image, text } = people[index];
-  console.log(people);
 
   const checkNumber = (number) => {
     if (number > people.length - 1) {
@@ -33,9 +32,9 @@ function Review() {
   const randomPerson = () => {
     let randomNumber = Math.floor(Math.random() * people.length);
     if (randomNumber === index){
-        randomNumber + 1;
+        randomNumber= randomNumber + 1;
     }
-    return setIndex(randomNumber);
+    return setIndex(checkNumber(randomNumber));
   };
   return (
     <article className="review">
